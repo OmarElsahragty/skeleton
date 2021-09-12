@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  pgdb:
+    image: "postgres:13"
+    restart: always
+    container_name: skeleton_postgres
+    volumes:
+      - skeleton_pgdata:/var/lib/postgresql/data
+    env_file:
+      - .postgres
+
+  redis:
+    image: redis:6.2.3-alpine
+    restart: always
+    container_name: skeleton_redis
+    volumes:
+      - skeleton_redis:/data:rw
+
+  backend:
+    build:
+      context: .
+    container_name: skeleton_backend
+    depends_on:
+      - pgdb
+      - redis
+    env_file:
+      - .env
+
+  frontend:
+    build:
+      context: ./client
+      args:
+        API_URL: ""
+    container_name: skeleton_frontenddepends_on:
+      - backend
+    volumes:
+      - skeleton_frontend_build:/skeleton_frontend/build
+
+  nginx:
+    image: "nginx:1.20.0-alpine"
+    ports:
+      - 80:80
+    container_name: skeleton_nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - skeleton_frontend_build:/var/www/frontend
+    depends_on:
+      - backend
+      - frontend
+
+volumes:
+  skeleton_pgdata:
+    driver: local
+    name: skeleton_pgdata
+  skeleton_frontend_build:
+    driver: local
+    name: skeleton_frontend_build
+  skeleton_redis:
+    driver: local
+    name: skeleton_redis

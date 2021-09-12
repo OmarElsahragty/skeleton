@@ -1,0 +1,15 @@
+FROM node:14.16
+
+WORKDIR /skeleton_frontend
+
+COPY ./package*.json /skeleton_frontend/
+
+RUN npm install
+
+COPY . /skeleton_frontend
+
+ARG API_URL
+
+ENV REACT_APP_HOST_IP_ADDRESS $API_URL
+
+RUN npm run build
