@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "9461572b-08b8-4eef-bb87-cd3a0a1f4bc5",
+		"name": "Skeleton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "{{accept-language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"password\": \"Password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-URL}}/login",
+							"host": [
+								"{{base-URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "{{accept-language}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"omar\",\r\n    \"lastName\":\"elsahragty\",\r\n    \"email\": \"omar_elsahragty-1@hotmail.com\",\r\n    \"gender\": \"M\",\r\n    \"picture\": null,\r\n    \"dateOfBirth\": \"1997-02-13\",\r\n    \"password\": \"Password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base-URL}}/registration",
+							"host": [
+								"{{base-URL}}"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "{{accept-language}}",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{x-access-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base-URL}}/profile",
+							"host": [
+								"{{base-URL}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "regions",
+			"item": [
+				{
+					"name": "regions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept-language",
+								"value": "{{accept-language}}",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "{{x-access-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base-URL}}/city/1/regions?pageSizeLimit=5&pageNumber=1",
+							"host": [
+								"{{base-URL}}"
+							],
+							"path": [
+								"city",
+								"1",
+								"regions"
+							],
+							"query": [
+								{
+									"key": "pageSizeLimit",
+									"value": "5"
+								},
+								{
+									"key": "pageNumber",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

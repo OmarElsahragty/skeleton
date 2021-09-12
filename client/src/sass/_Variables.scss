@@ -1,0 +1,44 @@
+/* -------------------------------------------------------------------------- */
+/*                                Colors                                      */
+/* -------------------------------------------------------------------------- */
+:root {
+  --primary-color: #f98512;
+  --secondary-color: #c4061d;
+
+  --primary-shadow: #db7a1a;
+
+  --danger: #cb2127;
+  --dark-danger: #b01f27;
+
+  --warning: #ffaf00;
+
+  --light-success: #09ce7d;
+  --success: #21aa41;
+  --dark-success: #4f9668;
+
+  --info: #19d4c6;
+
+  --black: #020b2c;
+  --black-two: #424242;
+  --black-three: #07121b;
+
+  --white: #ffffff;
+  --white-gray: #f1f2f2;
+
+  --very-light-gray: #dedede;
+  --light-gray: #bdbdbd;
+  --gray: #757575;
+  --dark-gray: #5a5b5e;
+
+  --brownish-grey: #616161;
+
+  --grey-blue: #637685;
+
+  --active-gray: #f4f6f8;
+  --inactive-gray: #d8d8d8;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                defaults                                    */
+/* -------------------------------------------------------------------------- */
+$default_font-size: 1.6rem;

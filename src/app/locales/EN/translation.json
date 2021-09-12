@@ -1,0 +1,36 @@
+{
+  "ok": "Ok",
+  "and": "and",
+  "server-error": "Oops! Something went wrong!",
+
+  "no-data": "No data found",
+
+  "forbidden": "Failed, Forbidden access",
+  "unauthorized": "Failed, Unauthorized",
+  "no-token": "Failed, No token provided",
+
+  "wrong-OTP": "wrong Password (OTP)",
+
+  "user-not-found": "User not found",
+  "wrong-credentials": "wrong credentials",
+
+  "required-first-name": "The first name is required",
+  "invalid-first-name": "The first name must contain at least 3 alphabetic characters, and a maximum of 30 alphabetic characters",
+
+  "required-last-name": "The last name is required",
+  "invalid-last-name": "The last name must contain at least 3 alphabetic characters, and a maximum of 30 alphabetic characters",
+
+  "required-password": "A password is required",
+  "invalid-password": "The password must contain at least 8 characters, 1 number, 1 lower case character, 1 upper case character",
+
+  "used-email": "This email is already exists",
+  "invalid-email": "Invalid email",
+  "required-email": "The email is required",
+
+  "invalid-dateOfBirth-syntax": "invalid date of birth syntax",
+  "invalid-dateOfBirth": "invalid date of birth",
+  "required-dateOfBirth": "The date of birth is required",
+
+  "required-gender": "The gender is required",
+  "invalid-gender": "The gender must be (M) or (F)"
+}

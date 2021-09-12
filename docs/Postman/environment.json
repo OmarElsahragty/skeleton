@@ -1,0 +1,24 @@
+{
+	"id": "042bfe90-5476-44bb-8251-7eed664a28ea",
+	"name": "Skeleton",
+	"values": [
+		{
+			"key": "base-URL",
+			"value": "127.0.0.1:5000/api",
+			"enabled": true
+		},
+		{
+			"key": "accept-language",
+			"value": "EN",
+			"enabled": true
+		},
+		{
+			"key": "x-access-token",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-09-12T15:17:14.094Z",
+	"_postman_exported_using": "Postman/8.12.2"
+}

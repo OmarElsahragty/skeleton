@@ -1,0 +1,16 @@
+/* -------------------------------------------------------------------------- */
+/*                              material-ui                                   */
+/* -------------------------------------------------------------------------- */
+.MuiOutlinedInput-notchedOutline {
+  border-width: 0.1rem !important;
+}
+.MuiFormHelperText-root {
+  font-size: $default_font-size * 0.7 !important;
+}
+.MuiFormHelperText-root {
+  text-align: right !important;
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root {
+  border-radius: 0.8rem !important;
+}

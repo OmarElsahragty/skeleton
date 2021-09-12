@@ -1,0 +1,36 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Fonts                                     */
+/* -------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Acumin-Regular";
+  src: url("../assets/fonts/Acumin-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Acumin-Bold";
+  src: url("../assets/fonts/Acumin-Bold.otf") format("opentype");
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  color: var(--black);
+  font-size: $default_font-size;
+  font-family: "Acumin-Regular";
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                text overflow                               */
+/* -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  text-overflow: clip;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

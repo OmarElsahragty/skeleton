@@ -1,0 +1,53 @@
+// MEDIA QUERY MANAGER
+/*
+$breakpoints:
+- small-screen
+- medium-screen
+- big-screen
+- very-big-screen
+- huge-screen
+
+
+0 ~ 500px:        tiny-screen
+500 ~ 700px:      small-screen
+700 ~ 900px:      medium-screen               
+900 ~ 1100px:     big-screen
+1100 ~ 1400px:    very-big-screen
+1400 ~ 1800px:    normal styles apply
+1800px + :        Big desktop
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tiny-screen {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    } //500px
+  }
+  @if $breakpoint == small-screen {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    } //700px
+  }
+  @if $breakpoint == medium-screen {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == big-screen {
+    @media only screen and (max-width: 68.75em) {
+      @content;
+    } //1100px
+  }
+  @if $breakpoint == very-big-screen {
+    @media only screen and (max-width: 87.5em) {
+      @content;
+    } //1400px
+  }
+  @if $breakpoint == huge-screen {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}

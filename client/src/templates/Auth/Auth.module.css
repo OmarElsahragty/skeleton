@@ -1,0 +1,8 @@
+.authBox {
+  border-radius: 0.8rem;
+  border: solid 0.1rem var(--dark-gray);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+  overflow: hidden;
+  width: 41.8rem;
+}

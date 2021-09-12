@@ -1,0 +1,76 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "operator-linebreak": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "implicit-arrow-linebreak": "off",
+    "curly": ["error", "multi-line"],
+    "object-curly-newline": "off",
+    "no-nested-ternary": "off",
+    "react/no-danger": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/destructuring-assignment": 0,
+
+    "no-use-before-define": [
+      "error",
+      { "functions": true, "classes": true, "variables": true }
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      { "requireReturnForObjectLiteral": true }
+    ],
+    "no-console": ["error", { "allow": ["error", "success"] }],
+    "nonblock-statement-body-position": ["error", "any"],
+    "quotes": [2, "double", { "avoidEscape": true }],
+    "comma-dangle": ["error", "only-multiline"],
+    "func-names": ["error", "never"],
+    "no-restricted-globals": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "no-else-return": "off",
+    "no-plusplus": "off",
+    "linebreak-style": 0,
+    "max-len": [
+      1,
+      {
+        "code": 165,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "extends": ["react-app", "airbnb"]
+}

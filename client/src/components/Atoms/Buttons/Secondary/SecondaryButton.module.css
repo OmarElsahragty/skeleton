@@ -1,0 +1,12 @@
+.secondaryBtn {
+  color: var(--dark-gray) !important;
+  background-color: var(--white-gray) !important;
+  padding: 1rem 3.5rem !important;
+  border-radius: 55px !important;
+  min-height: 5.8rem !important;
+}
+
+.disabledButton {
+  color: var(--white-gray) !important;
+  background-color: var(--inactive-gray) !important;
+}

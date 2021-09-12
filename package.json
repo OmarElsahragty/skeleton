@@ -1,0 +1,58 @@
+{
+  "name": "skeleton",
+  "description": "Domain-driven design (DDD) structure Skeleton",
+  "author": {
+    "name": "Omar Elsahragty",
+    "email": "omar_elsahragty@hotmail.com",
+    "github": "https://github.com/OmarElsahragty"
+  },
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=Production node -r esm .",
+    "dev": "NODE_ENV=Development nodemon -r esm .",
+    "docker": "NODE_ENV=Docker node -r esm .",
+    "docker:rest": "NODE_ENV=Docker node -r esm ./scripts/Migration.Script",
+    "migrate": "NODE_ENV=Initialization node -r esm ./scripts/Migration.Script",
+    "rest": "NODE_ENV=Rest node -r esm ./scripts/Migration.Script",
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@sentry/node": "^6.12.0",
+    "@sentry/tracing": "^6.12.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "i18next": "^20.6.1",
+    "i18next-fs-backend": "^1.1.1",
+    "i18next-http-middleware": "^3.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^3.0.0",
+    "nodemailer": "^6.6.3",
+    "pg": "^8.7.1",
+    "randexp": "^0.5.3",
+    "redis": "^3.1.2",
+    "sequelize": "^6.6.5",
+    "socket.io": "^4.2.0",
+    "twilio": "^3.67.2",
+    "winston": "^3.3.3",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.4",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2",
+    "mocha": "^9.1.1",
+    "supertest": "^6.1.6"
+  }
+}

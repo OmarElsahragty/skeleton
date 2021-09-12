@@ -1,0 +1,177 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: Skeleton
+  contact: {}
+host: 127.0.0.1:5000
+basePath: /api/
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /login:
+    post:
+      summary: login
+      tags:
+        - auth
+      operationId: login
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/loginrequest"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /registration:
+    post:
+      summary: registration
+      tags:
+        - auth
+      operationId: registration
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: Body
+          in: body
+          required: true
+          description: ""
+          schema:
+            $ref: "#/definitions/registrationrequest"
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /profile:
+    get:
+      summary: profile
+      tags:
+        - users
+      operationId: profile
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: x-access-token
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+  /city/1/regions:
+    get:
+      summary: regions
+      tags:
+        - regions
+      operationId: regions
+      deprecated: false
+      produces:
+        - application/json
+      parameters:
+        - name: pageSizeLimit
+          in: query
+          required: true
+          type: integer
+          format: int32
+          description: ""
+        - name: pageNumber
+          in: query
+          required: true
+          type: integer
+          format: int32
+          description: ""
+        - name: accept-language
+          in: header
+          required: true
+          type: string
+          description: ""
+        - name: x-access-token
+          in: header
+          required: true
+          type: string
+          description: ""
+      responses:
+        "200":
+          description: ""
+          headers: {}
+definitions:
+  loginrequest:
+    title: loginrequest
+    example:
+      email: admin@email.com
+      password: Password123
+    type: object
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    required:
+      - email
+      - password
+  registrationrequest:
+    title: registrationrequest
+    example:
+      firstName: omar
+      lastName: elsahragty
+      email: omar_elsahragty-1@hotmail.com
+      gender: M
+      picture: null
+      dateOfBirth: "1997-02-13"
+      password: Password123
+    type: object
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+      gender:
+        type: string
+      picture:
+        type: string
+      dateOfBirth:
+        type: string
+      password:
+        type: string
+    required:
+      - firstName
+      - lastName
+      - email
+      - gender
+      - picture
+      - dateOfBirth
+      - password
+tags:
+  - name: auth
+  - name: users
+  - name: regions
