@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Run docker compose ➡ `docker-compose up --build -d`
 2. Fill `.postgres` file configurations
-3. docker migrate database (Remove data if exist) -> `docker exec -it [backend container name] npm run docker:rest`
+3. docker migrate database (Remove data if exist) -> `docker exec -it skeleton_backend npm run docker:rest`
 
 ### Local (Backend)
 
