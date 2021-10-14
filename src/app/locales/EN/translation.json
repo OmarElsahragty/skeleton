@@ -32,5 +32,8 @@
   "required-dateOfBirth": "The date of birth is required",
 
   "required-gender": "The gender is required",
-  "invalid-gender": "The gender must be (M) or (F)"
+  "invalid-gender": "The gender must be (M) or (F)",
+
+  "page-required": "Page in query params is required",
+  "pageSizeLimit-required": "pageSizeLimit in query params is required"
 }

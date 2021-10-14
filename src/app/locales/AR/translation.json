@@ -32,5 +32,8 @@
   "required-dateOfBirth": "تاريخ الميلاد مطلوب",
 
   "required-gender": "الجنس مطلوب",
-  "invalid-gender": "يجب أن يكون الجنس (M) أو (F)"
+  "invalid-gender": "يجب أن يكون الجنس (M) أو (F)",
+
+  "page-required": "مطلوب صفحة في معلمات الاستعلام",
+  "pageSizeLimit-required": "مطلوب pageSizeLimit في معلمات الاستعلام"
 }

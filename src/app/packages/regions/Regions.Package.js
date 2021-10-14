@@ -1,5 +1,10 @@
 import Database from "../../../infrastructure/database";
-import { Filter, Pagination, Protocols } from "../../helpers";
+import {
+  Filter,
+  Pagination,
+  Protocols,
+  ObjectUndefinedRemoval,
+} from "../../helpers";
 
 // **==========================================================================
 // **                               Regions
@@ -9,13 +14,12 @@ export const showRegions = async (
   { pageNumber, pageSizeLimit, ...args }
 ) => {
   try {
-    const Regions = await Database.Regions.findAndCountAll({
-      ...Pagination(
-        { where: { ...Filter(args), cityId } },
-        pageNumber,
-        pageSizeLimit
-      ),
-    });
+    const Regions = await Database.Regions.findAndCountAll(
+      Pagination(
+        { where: ObjectUndefinedRemoval({ ...Filter(args), cityId }) },
+        args
+      )
+    );
 
     return Protocols.appResponse({ data: Regions });
   } catch (err) {

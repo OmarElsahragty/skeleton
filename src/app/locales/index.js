@@ -33,4 +33,7 @@ export default {
 
   REQUIRED_GENDER: "required-gender",
   INVALID_GENDER: "invalid-gender",
+
+  PAGE_REQUIRED: "page-required",
+  PAGE_SIZE_LIMIT_REQUIRED: "pageSizeLimit-required",
 };

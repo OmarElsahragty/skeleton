@@ -1,6 +1,7 @@
 import express from "express";
-import { Authenticate, Authorization } from "../middlewares";
+import { Authenticate, Authorization, validate } from "../middlewares";
 import { regionsController } from "../controllers";
+import { systemValidation } from "../../../app/validations";
 
 const router = express.Router();
 
@@ -11,6 +12,7 @@ router.get(
   "/city/:cityId/regions",
   Authenticate(),
   Authorization("citesAndRegions", "access"),
+  validate(systemValidation.paginationQueryValidator, "query"),
   regionsController.showRegions
 );
 

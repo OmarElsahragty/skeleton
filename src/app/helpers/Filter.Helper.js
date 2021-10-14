@@ -1,10 +1,12 @@
 import { Op } from "sequelize";
+import { prohibitedFilterKeys } from "../../infrastructure/constants";
 
 export default (params) => {
   const filterObj = {};
 
   Object.keys(params).map((key) => {
-    if (key !== "page" || key !== "pageSizeLimit" || !params[key]) return;
+    const isProhibited = prohibitedFilterKeys.find((item) => item === key);
+    if (isProhibited || !params[key]) return;
 
     let value = null;
 

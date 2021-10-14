@@ -9,7 +9,7 @@ export default (schema, validateWhat = "body") =>
         strict: false,
         stripUnknown: true,
       });
-      req[validateWhat] = validatedData;
+      if (validateWhat === "body") req.body = validatedData;
       next();
     } catch (err) {
       return next(Errors.http.badRequest(MultiMessages(err.errors, req)));
