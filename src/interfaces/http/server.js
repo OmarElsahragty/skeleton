@@ -1,5 +1,6 @@
 import cors from "cors";
 import http from "http";
+import helmet from "helmet";
 import express from "express";
 import Socket from "./socket";
 import { I18next, ErrorHandler } from "./middlewares";
@@ -15,17 +16,7 @@ class Server {
   }
 
   setup() {
-    this.app
-      .use(cors())
-      .use(I18next)
-      .use(express.json())
-      .disable("x-powered-by");
-
-    this.app.get("/api/ping", (_, res) => {
-      res.status(200).json({
-        success: true,
-      });
-    });
+    this.app.use(helmet()).use(cors()).use(express.json()).use(I18next);
 
     this.app.use("/api", routes);
 
