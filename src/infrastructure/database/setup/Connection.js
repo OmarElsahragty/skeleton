@@ -12,7 +12,9 @@ export default new Sequelize(
     pool: Config.Database.Pool,
 
     logging:
+      process.env.NODE_ENV === "DockerDataBaseRest" ||
+      process.env.NODE_ENV === "Initialization" ||
       process.env.NODE_ENV === "Rest" ||
-      process.env.NODE_ENV === "Initialization",
+      process.env.NODE_ENV === "Delete",
   }
 );

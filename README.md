@@ -10,25 +10,27 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Run docker compose ➡ `docker-compose up --build -d`
 2. Fill `.postgres` file configurations
-3. docker migrate database (Remove data if exist) -> `docker exec -it skeleton_backend npm run docker:rest`
+3. docker migrate database (Remove data if exist) ➡ `docker exec -it skeleton_backend npm run docker:database:rest`
 
 ### Local (Backend)
 
 1. Install node dependencies ➡ `npm install`
 2. Create a new database on PostgreSQL
 3. Fill `.env` file configurations
-4. Database migration ➡ `npm run migrate`
+4. Database migration ➡ `npm run database:init`
 5. Development run ➡ `npm run dev` || Production run ➡ `npm run start`
 
 ### NPM scripts (Backend)
 
-1. `npm run docker` ➡ Docker runtime environment.
-2. `npm run start` ➡ Production runtime environment.
-3. `npm run dev` ➡ Development runtime environment. (Listening on src for changes)
-4. `npm run lint` ➡ Run linter. (Checking for mistakes)
-5. `npm run migrate` ➡ Migrate database. (Create tables and seed database)
-6. `npm run rest` ➡ Rest database. (Remove the existing data)
-7. `npm run docker:rest` ➡ Docker runtime environment database migration. (Remove the existing data)
+1. `npm run start` ➡ Production runtime environment.
+2. `npm run dev` ➡ Development runtime environment. (Listening on src for changes) {`nodemon` must be installed globally}
+3. `npm run docker` ➡ Docker runtime environment.
+4. `npm run docker:database:rest` ➡ Docker runtime environment database migration. (Remove the existing data)
+5. `npm run lint` ➡ Run linter. (Checking for mistakes)
+6. `npm run database:init` ➡ Initialize database. (Create tables and seed database)
+7. `npm run database:rest` ➡ Initialize/Rest database. (Remove the existing data) {DO NOT USE}
+8. `npm run database:delete` ➡ Delete all the existing data. {DO NOT USE}
+9. `npm run test` ➡ Run test cases.
 
 ### Technologies
 

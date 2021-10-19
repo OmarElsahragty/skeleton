@@ -15,9 +15,7 @@ class SequelizeDatabaseErrors {
   }
 
   handleAppDatabaseError(err) {
-    return SERVER_ERROR(
-      `${err} - Database Error while performing query: ${err.sql}`
-    );
+    return SERVER_ERROR(err);
   }
 
   handleValidationError(err) {
