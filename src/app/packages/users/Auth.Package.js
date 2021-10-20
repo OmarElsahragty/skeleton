@@ -17,7 +17,9 @@ export const checkUser = async (id = null, email = null, adminCheck = null) => {
 
     return Protocols.appCheckers({
       data: user,
-      isValid: adminCheck === null || adminCheck === user.dataValues.isAdmin,
+      isValid:
+        !!user &&
+        (adminCheck === null || adminCheck === user.dataValues.isAdmin),
     });
   } catch (err) {
     return Protocols.appResponse({ err });

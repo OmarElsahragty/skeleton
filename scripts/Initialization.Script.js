@@ -1,4 +1,5 @@
 import Database, { DatabaseSeeds } from "../src/infrastructure/database";
+import { ErrorHandler } from "./Utilities";
 import "../TerminalColors";
 
 /* eslint-disable no-console */
@@ -30,4 +31,4 @@ Database.connection
       );
     }
   })
-  .catch((error) => console.error(`${error.message}`.error));
+  .catch((err) => ErrorHandler(err));

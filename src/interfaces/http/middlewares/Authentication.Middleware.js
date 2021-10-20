@@ -4,6 +4,14 @@ import Errors from "../../errors";
 import { usersPackage } from "../../../app/packages";
 import LocaleKeys from "../../../app/locales";
 
+// *==========================================================================
+// *                           Admin Check Cases
+// *==========================================================================
+// * adminCheck = false  -->   pass users  (only)
+// * adminCheck = true   -->   pass admins (only)
+// * adminCheck = null   -->   pass both
+// *==========================================================================
+
 export default (adminCheck = null) => {
   return (req, _, next) => {
     const token = req.headers["x-access-token"];
