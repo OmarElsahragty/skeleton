@@ -5,8 +5,6 @@ Dotenv.config();
 export default Object.freeze({
   Port: process.env.PORT * 1,
 
-  SentryDNS: process.env.SENTRY_DNS,
-
   Database: {
     Host:
       process.env.NODE_ENV === "Docker"

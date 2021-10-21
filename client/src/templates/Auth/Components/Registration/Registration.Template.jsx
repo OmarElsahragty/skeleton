@@ -10,15 +10,26 @@ import {
   PrimaryButton,
 } from "../../../../components/Atoms";
 
-const LoginTemplate = ({ login }) => {
+const RegistrationTemplate = ({ register }) => {
   const FormikHandler = useFormik({
-    initialValues: { email: "", password: "" },
+    initialValues: { name: "", email: "", password: "" },
     onSubmit: async (data, { setSubmitting }) => {
       setSubmitting(false); // disable the button until async call
-      await login({ email: data.email.trim(), ...data });
+      await register({
+        name: data.name.trim(),
+        email: data.email.trim(),
+        ...data,
+      });
       setSubmitting(true); // enable button when async call finish
     },
     validationSchema: yup.object({
+      name: yup
+        .string()
+        .trim()
+        .min(3, "Name must have at least 3 characters")
+        .max(30, "Name must have at most 30 characters")
+        .matches(/^[a-zA-Z\s]*$/, "Name must be alphabetic")
+        .required("Required Name"),
       email: yup
         .string()
         .trim()
@@ -42,6 +53,17 @@ const LoginTemplate = ({ login }) => {
           <Form>
             <Grid container>
               <Grid item xs={12} className="mb-20">
+                <LabelUp htmlFor="name" text="Name" />
+                <TextField
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  id="name"
+                  fullWidth
+                  check
+                />
+              </Grid>
+              <Grid item xs={12} className="mb-20">
                 <LabelUp htmlFor="email" text="Email address" />
                 <TextField
                   type="email"
@@ -64,10 +86,11 @@ const LoginTemplate = ({ login }) => {
               <Grid item xs={12}>
                 <PrimaryButton
                   fullWidth
-                  text="Login"
+                  text="Register"
                   type="submit"
                   disabled={
                     !FormikHandler.isValid ||
+                    !FormikHandler.values.name ||
                     !FormikHandler.values.email ||
                     !FormikHandler.values.password
                   }
@@ -81,8 +104,8 @@ const LoginTemplate = ({ login }) => {
   );
 };
 
-LoginTemplate.propTypes = {
-  login: PropTypes.func.isRequired,
+RegistrationTemplate.propTypes = {
+  register: PropTypes.func.isRequired,
 };
 
-export default LoginTemplate;
+export default RegistrationTemplate;

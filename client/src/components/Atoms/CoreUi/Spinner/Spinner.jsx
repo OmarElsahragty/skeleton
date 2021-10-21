@@ -1,5 +1,5 @@
 import React from "react";
-import { ClimbingBoxLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 import PropTypes from "prop-types";
 
 const Spinner = ({
@@ -9,12 +9,12 @@ const Spinner = ({
   margin = 2,
   loading,
 }) => (
-  <ClimbingBoxLoader
+  <PropagateLoader
     height={height}
     width={width}
     raduis={radius}
     margin={margin}
-    color="#EA6115"
+    color="#111c4e"
     loading={loading}
   />
 );

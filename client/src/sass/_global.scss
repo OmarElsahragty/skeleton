@@ -102,3 +102,36 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield !important;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                           pages navigation animations                             */
+/* -------------------------------------------------------------------------- */
+.right-enter {
+  transform: translateX(12rem);
+  opacity: 0;
+}
+
+.pageAnimation-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+.pageAnimation-enter {
+  transform: translateX(12rem);
+  opacity: 0;
+}
+
+.pageAnimation-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+}
+.pageAnimation-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.pageAnimation-exit-active {
+  transform: translateX(12rem);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}

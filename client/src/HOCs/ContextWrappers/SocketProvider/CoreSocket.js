@@ -1,13 +1,9 @@
 import socketIOClient from "socket.io-client";
 import { SOCKET_URL } from "../../../constants";
 
-class _CoreSocket {
+class CoreSocket {
   constructor() {
     this.socket = socketIOClient(SOCKET_URL);
-
-    // this.socket.on("connect_error", (err) => {
-    //   console.error(`SOCKET CONNECTION ERROR: ${err.message}`);
-    // });
   }
 
   emit(event, data, clientId) {
@@ -27,4 +23,4 @@ class _CoreSocket {
   }
 }
 
-export default new _CoreSocket();
+export default new CoreSocket();

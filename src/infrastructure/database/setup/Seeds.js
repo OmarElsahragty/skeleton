@@ -4,19 +4,13 @@ export default async (Database) => {
   // **==========================================================================
   await Database.Users.bulkCreate([
     {
-      firstName: "Admin",
-      lastName: "Admin",
-      gender: "M",
-      dateOfBirth: "1997-02-13",
+      name: "Admin",
       email: "admin@email.com",
       password: "$2a$10$yQeb44ZCO1Z8x5ncPv5hh.DekQH8EuZSPfnFnlrf2380o.ovalVHm", // ! Password123
       isAdmin: true,
     },
     {
-      firstName: "Omar",
-      lastName: "Elsahragty",
-      gender: "M",
-      dateOfBirth: "1997-2-13",
+      name: "Sahragty",
       email: "user@email.com",
       password: "$2a$10$yQeb44ZCO1Z8x5ncPv5hh.DekQH8EuZSPfnFnlrf2380o.ovalVHm", // ! Password123
       privileges: { citesAndRegions: { access: true } },

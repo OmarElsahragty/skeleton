@@ -19,8 +19,7 @@
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "animate.css": "^4.1.1",
-    "axios": "^0.21.4",
-    "cra-template": "1.1.2",
+    "axios": "^0.23.0",
     "formik": "^2.2.9",
     "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
@@ -29,22 +28,11 @@
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-spinners": "^0.11.0",
-    "react-toastify": "^8.0.2",
-    "socket.io-client": "^4.2.0",
-    "styled-components": "^5.3.1",
-    "yup": "^0.32.9"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-import": "^2.24.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "react-toastify": "^8.0.3",
+    "react-transition-group": "^4.4.2",
+    "socket.io-client": "^4.3.2",
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.11"
   },
   "browserslist": {
     "production": [
@@ -57,5 +45,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.22.1"
   }
 }

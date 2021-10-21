@@ -1,0 +1,26 @@
+.BodyNav {
+  border-bottom: 0.1rem solid var(--very-light-gray) !important;
+}
+
+.item {
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding-bottom: 1.35rem;
+  position: relative;
+  opacity: 0.5;
+}
+.activeItem {
+  color: var(--primary-color);
+  opacity: 1;
+}
+.activeItem::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  background: var(--primary-color);
+}

@@ -10,24 +10,8 @@ export default (connection, DataTypes) =>
         allowNull: false,
         primaryKey: true,
       },
-      firstName: {
+      name: {
         type: DataTypes.STRING(35),
-        allowNull: false,
-      },
-      lastName: {
-        type: DataTypes.STRING(35),
-        allowNull: false,
-      },
-      picture: {
-        type: DataTypes.STRING(1024),
-        allowNull: true,
-      },
-      gender: {
-        type: DataTypes.ENUM("M", "F"),
-        allowNull: false,
-      },
-      dateOfBirth: {
-        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       email: {
@@ -46,7 +30,7 @@ export default (connection, DataTypes) =>
         type: DataTypes.JSONB,
         allowNull: false,
         defaultValue: {
-          citesAndRegions: { access: false },
+          citesAndRegions: { access: true },
         },
       },
       isAdmin: {

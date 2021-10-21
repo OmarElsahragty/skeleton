@@ -30,7 +30,6 @@ export const login = async ({ email, password }) => {
   try {
     const user = await Database.Users.findOne({
       where: { email },
-      attributes: ["id", "email", "password"],
     });
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = jwt.sign(
@@ -39,8 +38,9 @@ export const login = async ({ email, password }) => {
         { expiresIn: Config.JwtLifeTime }
       );
 
+      delete user.dataValues.password;
       return Protocols.appResponse({
-        data: { id: user.id, token },
+        data: { token, userData: user },
       });
     } else {
       return Protocols.appResponse({ err: LocaleKeys.WRONG_CREDENTIALS });
@@ -65,7 +65,8 @@ export const registration = async ({ password, ...args }) => {
       { expiresIn: Config.JwtLifeTime }
     );
 
-    return Protocols.appResponse({ data: { id: user.id, token } });
+    delete user.dataValues.password;
+    return Protocols.appResponse({ data: { token, userData: user } });
   } catch (err) {
     return Protocols.appResponse({ err });
   }

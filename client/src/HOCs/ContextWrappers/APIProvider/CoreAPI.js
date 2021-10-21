@@ -1,13 +1,15 @@
 import axios from "axios";
 import { BASE_URL } from "../../../constants";
+import { AuthCaller } from "./APICalls";
 
-class _CoreAPI {
+class CoreAPI {
   constructor() {
     this.caller = axios.create({
       baseURL: BASE_URL,
       headers: { "accept-language": "EN" },
     });
     this.__addInterceptors();
+    this.Auth = new AuthCaller(this.caller);
   }
 
   __addInterceptors() {
@@ -43,4 +45,4 @@ class _CoreAPI {
   }
 }
 
-export default new _CoreAPI();
+export default new CoreAPI();

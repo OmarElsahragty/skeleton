@@ -15,10 +15,10 @@ class BaseEventBus {
 
   _execWaits(name) {
     const callArr = this.waitingRegis.get(name);
-    for (let i = 0; i < callArr.length; i++) {
-      const variables = callArr[i];
+    callArr.map((call) => {
+      const variables = call;
       this.bus[name](...variables);
-    }
+    });
     this.waitingRegis.delete(name);
   }
 

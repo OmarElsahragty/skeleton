@@ -16,6 +16,12 @@ const TextFieldInput = ({
   const [field, meta] = useField(props);
   const errorText = check && meta.touched && meta.error ? meta.error : "";
 
+  const checkAdornment = meta.error ? (
+    <Close style={{ color: "var(--danger)" }} />
+  ) : (
+    <Done style={{ color: "var(--success)" }} />
+  );
+
   return (
     <TextField
       {...field}
@@ -35,14 +41,7 @@ const TextFieldInput = ({
           <InputAdornment position="end">
             <>
               {EndAdornment}
-
-              {check && meta.touched ? (
-                meta.error ? (
-                  <Close style={{ color: "var(--danger)" }} />
-                ) : (
-                  <Done style={{ color: "var(--success)" }} />
-                )
-              ) : null}
+              {check && meta.touched ? checkAdornment : null}
             </>
           </InputAdornment>
         ),
