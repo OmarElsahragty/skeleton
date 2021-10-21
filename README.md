@@ -16,7 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Install node dependencies ➡ `npm install`
 2. Create a new database on PostgreSQL
-3. Fill `.env` file configurations
+3. Create `.env` file with your configurations using `./docs/.env.example`
 4. Database migration ➡ `npm run database:init`
 5. Development run ➡ `npm run dev` || Production run ➡ `npm run start`
 
