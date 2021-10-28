@@ -9,7 +9,7 @@ Database.connection
     // * ENABLED FORCE MODE ON REST OR DOCKER OR DELETE
     force:
       process.env.NODE_ENV === "DockerDataBaseRest" ||
-      process.env.NODE_ENV === "Rest" ||
+      process.env.NODE_ENV === "Reset" ||
       process.env.NODE_ENV === "Delete",
     alter: false,
   })
@@ -23,7 +23,7 @@ Database.connection
     } else {
       console.log(
         `Database ${
-          process.env.NODE_ENV === "Rest" ||
+          process.env.NODE_ENV === "Reset" ||
           process.env.NODE_ENV === "DockerDataBaseRest"
             ? "rested"
             : "initialized"

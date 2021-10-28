@@ -14,7 +14,7 @@ export default new Sequelize(
     logging:
       process.env.NODE_ENV === "DockerDataBaseRest" ||
       process.env.NODE_ENV === "Initialization" ||
-      process.env.NODE_ENV === "Rest" ||
+      process.env.NODE_ENV === "Reset" ||
       process.env.NODE_ENV === "Delete",
   }
 );

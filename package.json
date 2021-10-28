@@ -13,9 +13,9 @@
     "start": "NODE_ENV=Production node -r esm .",
     "dev": "NODE_ENV=Development nodemon -r esm .",
     "docker": "NODE_ENV=Docker node -r esm .",
-    "docker:database:rest": "NODE_ENV=DockerDataBaseRest node -r esm ./scripts/Initialization.Script",
+    "docker:database:reset": "NODE_ENV=DockerDataBaseRest node -r esm ./scripts/Initialization.Script",
     "database:init": "NODE_ENV=Initialization node -r esm ./scripts/Initialization.Script",
-    "database:rest": "NODE_ENV=Rest node -r esm ./scripts/Initialization.Script",
+    "database:reset": "NODE_ENV=Reset node -r esm ./scripts/Initialization.Script",
     "database:delete": "NODE_ENV=Delete node -r esm ./scripts/Initialization.Script",
     "lint": "eslint .",
     "test": "mocha"
