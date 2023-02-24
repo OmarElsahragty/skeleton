@@ -39,7 +39,7 @@
     "pg-hstore": "^2.3.4",
     "randexp": "^0.5.3",
     "redis": "^3.1.2",
-    "sequelize": "^6.7.0",
+    "sequelize": "^6.29.0",
     "socket.io": "^4.3.1",
     "twilio": "^3.70.0",
     "winston": "^3.3.3",
